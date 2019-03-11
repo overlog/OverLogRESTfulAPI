@@ -9,9 +9,9 @@ import java.util.concurrent.TimeoutException;
 public class Controller {
 
     @PostMapping(path = "/log")
-    public String boo(@RequestParam String id) throws IOException, TimeoutException {
-        System.out.println(id);
-        SendLog logSender = new SendLog();
-        return id;
+    public void boo(@RequestParam String type, @RequestParam String text) throws IOException, TimeoutException {
+
+
+        SendLog.sendMessage(type + " " + text);
     }
 }
