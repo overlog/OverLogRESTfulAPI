@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 public class SendLog {
-    private static final String QUEUE_NAME = "overlogQueue";
+    private static final String QUEUE_NAME = "overlog";
 
     public static void sendMessage(String logPayload) throws IOException, TimeoutException {
         ConnectionFactory factory = new ConnectionFactory();
