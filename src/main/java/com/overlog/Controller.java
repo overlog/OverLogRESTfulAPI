@@ -12,6 +12,7 @@ public class Controller {
     public void boo(@RequestParam String type, @RequestParam String text) throws IOException, TimeoutException {
 
 
-        SendLog.sendMessage(type + " " + text);
+
+        SendLog.sendMessage(type + "," + text);
     }
 }
