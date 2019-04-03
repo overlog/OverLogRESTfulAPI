@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.overlog</groupId>
-	<artifactId>overlog</artifactId>
+	<artifactId>overlog-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Overlog</name>
 	<description>OverLog logger.</description>
