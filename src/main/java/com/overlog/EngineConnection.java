@@ -12,14 +12,14 @@ import java.util.UUID;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
-public class SendLog implements AutoCloseable{
+public class EngineConnection implements AutoCloseable{
 
     private static final String QUEUE_NAME = "overlog";
     private Connection connection;
     private Channel channel;
 
 
-    public SendLog() throws IOException, TimeoutException {
+    public EngineConnection() throws IOException, TimeoutException {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("localhost");
 
