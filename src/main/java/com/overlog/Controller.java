@@ -27,7 +27,9 @@ public class Controller {
         EngineConnection databaseConnectionObject = new EngineConnection();
         String id = databaseConnectionObject.sendMessage("user" + "seperator" + username + "seperator" + passwd);
 
-        return JWTController.generateJWT(username, passwd, id);
+
+
+        return id.equals("-1") ? "Incorrenct username or password" :JWTController.generateJWT(username, passwd, id);
     }
 
 }
