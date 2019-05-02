@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 public class Controller {
 
     @PostMapping(path = "/log")
-    public String sendLog(@RequestParam String type, @RequestParam String text, @RequestParam String JWT) throws Exception {
+    public String sendLog(@RequestParam String type, @RequestParam String text, @RequestParam String date, @RequestParam String JWT) throws Exception {
 
 
 
@@ -14,7 +14,7 @@ public class Controller {
         if (JWTController.validateJWT(JWT)){
 
 
-            return databaseConnectionObject.sendMessage("log" +  "seperator" + type + "seperator" + text + "seperator" + JWTController.getID(JWT));
+            return databaseConnectionObject.sendMessage("log" +  "seperator" + type + "seperator" + text +  "seperator" + JWTController.getID(JWT) + "seperator" + date);
         }
         else return "Invalid JWT";
 
